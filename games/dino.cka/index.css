@@ -1,0 +1,214 @@
+/*** variables ***/
+
+:root {
+    --red-wine-on: #b30000;
+    --red-wine-off: #800000;
+    --red-wine-soft: #630c0c93;
+    --black: #181818;
+    --white: #f9f9f9;
+}
+
+
+/*** general ***/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    height: 100vh;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin-left: 418px;
+}
+
+/*** juego ***/
+
+.contenedor {
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(
+        to top,
+        transparent,
+        transparent
+    );
+    transition: background-color 1s linear;
+    overflow: hidden;
+}
+
+.mediodia {
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--red-wine-soft)
+    );
+    transition: 2s;
+}
+
+.tarde {
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--red-wine-off)
+    );
+}
+
+.noche {
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--red-wine-on)
+    );
+}
+
+.dino {
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+    background: url(dino.png) repeat-x 0px 0px;
+    background-size: 333px 84px;
+    background-position-x: 0px;
+
+}
+
+.dino-corriendo {
+    animation: animarDino 0.25s steps(2) infinite;
+}
+.dino-estrellado {
+    background-position-x: -252px;
+}
+
+.suelo {
+    width: 200%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(suelo.png) repeat-x 0px 0px;
+    background-size: 50% 42px;
+
+}
+
+.cactus{
+    width: 46px;
+    height: 96px;
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+    background: url(cactus1.png) no-repeat;
+}
+.cactus2{
+    width: 98px;
+    height: 66px;
+    background: url(cactus2.png) no-repeat;
+}
+
+.nube{
+    width: 92px;
+    height: 26px;
+    position: absolute;
+    z-index: 0;
+    background: url(nube.png) no-repeat;
+    background-size: 92px 26px;
+}
+
+.score{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+}
+
+.game-over{
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    font-size: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    transition-duration: 2s;
+}
+
+a {
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--black)
+    );
+    border-radius: 50%;
+    color: var(--white);
+    text-decoration: none; 
+}
+
+a:hover {
+    color: var(--white);
+    cursor: pointer;
+    transition-duration: 2s;
+}
+
+a:focus {
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        black
+    );
+}
+
+@keyframes animarDino{
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -252px;
+    }
+}
+
+/*** text to mobile and tablet ***/
+@media (max-width: 912px){
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 90vh;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.8),
+            rgba(0,0,0,0.8)
+        ) , url(error.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+    }
+    .contenedor {
+        display: none;
+    }
+    .game-over {
+        display: none;
+    }
+} 
+

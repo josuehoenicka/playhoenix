@@ -1,0 +1,133 @@
+/*** variables ***/
+
+:root {
+    --red-wine-on: #b30000;
+    --red-wine-off: #800000;
+    --red-wine-soft: #630c0c93;
+    --black: #181818;
+    --white: #f9f9f9;
+}
+
+/*** general ***/
+
+* {
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    color: var(--red-wine-off);
+    user-select: none;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/*** juego ***/
+
+#board, .boardInfo {
+    max-width: 500px;
+    max-height: 80vh;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin-left: 400px;
+    margin-top: 40px;
+}
+
+.boardInfo {
+    font-size: 18px;
+}
+
+#start {
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--red-wine-off)
+    );
+}
+
+#start:hover {
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--red-wine-on)
+    );
+    cursor: pointer;
+    color: var(--white);
+    transition: 2s;
+}
+
+#gameOver {
+    display: none;
+    margin: 10px 0;
+    margin-left: 580px;
+    transition: 2s;
+    color: var(--white);
+}
+
+.boardInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 405px;
+}
+
+#start {
+    font-size: 25px;
+    border: none;
+    color: var(--black);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+#scoreBoard {
+    display: inline-flex;
+    padding-top: 25px;
+    color: var(--white);
+}
+
+.square {
+    aspect-ratio: 1;
+}
+
+.emptySquare {
+    background-color: black;
+}
+
+.snakeSquare {
+    background-color: rgb(3, 65, 3);
+    border: 1px solid var;
+}
+
+.foodSquare {
+    background-color: rgb(196, 6, 6);
+}
+
+/*** text to mobile and tablet***/
+@media (max-width: 912px){
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 90vh;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.8),
+            rgba(0,0,0,0.8)
+        ) , url(error.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+    }
+    div {
+        display: none;
+    }
+}
