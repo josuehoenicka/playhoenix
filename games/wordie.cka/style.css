@@ -1,4 +1,4 @@
-/*** variables ***/
+/********* variables *********/
 
 :root {
     --red-wine-on: #b30000;
@@ -8,7 +8,7 @@
     --white: #f9f9f9;
 }
 
-/*** general ***/
+/********* general *********/
 
 * {
     user-select: none;
@@ -38,7 +38,7 @@ img {
     height: 100px;
 }
 
-/*** juego ***/
+/********** juego **********/
 
 
 #wordContainer {
@@ -85,7 +85,7 @@ img {
     transition: 2s;
 }
 
-/*** text to mobile and tablet ***/
+/********** media query **********/
 
 @media (max-width: 912px){
     body {
