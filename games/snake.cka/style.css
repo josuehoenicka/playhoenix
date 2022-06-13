@@ -1,4 +1,4 @@
-/*** variables ***/
+/********* variables *********/
 
 :root {
     --red-wine-on: #b30000;
@@ -8,7 +8,7 @@
     --white: #f9f9f9;
 }
 
-/*** general ***/
+/********* general *********/
 
 * {
     font-family: 'Fuzzy Bubbles', cursive;
@@ -26,7 +26,7 @@ img {
     margin-right: 100px;
 }
 
-/*** juego ***/
+/********** juego **********/
 
 #board, .boardInfo {
     max-width: 500px;
@@ -108,7 +108,8 @@ img {
     background-color: rgb(196, 6, 6);
 }
 
-/*** text to mobile and tablet***/
+/********* media query *********/
+
 @media (max-width: 912px){
     body {
         display: flex;
