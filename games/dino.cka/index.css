@@ -1,4 +1,4 @@
-/*** variables ***/
+/********** variables **********/
 
 :root {
     --red-wine-on: #b30000;
@@ -9,7 +9,7 @@
 }
 
 
-/*** general ***/
+/********** general **********/
 
 * {
     padding: 0;
@@ -31,7 +31,7 @@ img {
     margin-left: 418px;
 }
 
-/*** juego ***/
+/********** juego **********/
 
 .contenedor {
     width: 920px;
@@ -185,7 +185,8 @@ a:focus {
     }
 }
 
-/*** text to mobile and tablet ***/
+/********** media query **********/
+
 @media (max-width: 912px){
     body {
         display: flex;
